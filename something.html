@@ -8,18 +8,43 @@
 
             /* icon */
             .row {
-                width: 720px;
+                width: 650px;
                 margin: 15px auto 15px auto;
                 border-style: solid; /*this is mainly so i can see where the images go*/
+            }
+
+            .icons{
+                display: table-cell;
+                vertical-align: middle;
+                padding: 10px;
             }
         </style>
     </head>
     <body>
         <div class="row">
             <!-- oh god dividers; have one for each icons -->
-            <img id="icon1" src="img/donut_01.png" height="200" weight="200">
+            <div class="icons">
+                <img id="img1" src="img/donut_01.png" height="200" weight="200">
+            </div>
+            <div class="icons">
+                <img id="img2" src="img/donut_02.png" height="200" weight="200">
+            </div>
+            <div class="icons">
+                <img id="img3" src="img/donut_03.png" height="200" weight="200">
+            </div>
         </div>
-    
+
+        <!-- some random div cus why not :colonD: -->
+        <div>
+            <img id="hexa" src="img\her.png" height="200" weight="200">
+            <img id="star" src="img\sta.png" height="200" weight="200">
+        </div>
+        <div>
+            <img id="rect" src="img\rec.png" height="200" weight="200">
+            <img id="square" src="img\sqr.png" height="200" weight="200">
+        </div>
+
+
         <script>
             var sound1 = new buzz.sound("sound/glitch1.mp3");
             var sound2 = new buzz.sound("sound/glitch2.mp3");
