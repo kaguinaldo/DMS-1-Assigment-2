@@ -7,56 +7,98 @@
             /* css stuff goes here */
             /* i'll have to create classes for each image containers --> i'll have to decide this */
 
+            body {
+                background-color: #111013;
+            }
 
             /* icon */
             .row {
-                width: 650px;
-                margin: 15px auto 15px auto;
-                border-style: solid; /*this is mainly so i can see where the images go*/
+                width: calc(100% - 20%);
+                margin: 15px auto;
             }
 
-            .icons{
+            .icon {
                 display: table-cell;
                 vertical-align: middle;
-                padding: 10px;
+                padding: 0px 100px;
             }
+
         </style>
     </head>
     <body>
+        <!-- simple stuff just in case-->
         <div class="row">
-            <!-- oh god dividers; have one for each icons -->
-            <div class="icons">
-                <img id="don1" src="img/donut_01.png" height="200" weight="200">
+            <div class="icon">
+                <img id="ennui" src="img/1nh.png" height="200" width="200"
+                onmouseover="this.src='img/1h.png';"
+                onmouseout="this.src='img/1nh.png';"/>
             </div>
-            <div class="icons">
-                <img id="don2" src="img/donut_02.png" height="200" weight="200">
+            <div class="icon">
+                <img id="isolation" src="img/2nh.png" height="200" width="200"
+                onmouseover="this.src='img/2h.png';"
+                onmouseout="this.src='img/2nh.png';"/>
             </div>
-            <div class="icons">
-                <img id="don3" src="img/donut_03.png" height="200" weight="200">
+            <div class="icon">
+                <img id="potential" src="img/3nh.png" height="200" width="200"
+                onmouseover="this.src='img/3h.png';"
+                onmouseout="this.src='img/3nh.png';"/>
             </div>
         </div>
 
-        <!-- some random div cus why not :colonD: -->
-        <div>
-            <img id="hexa" src="img/her.png" height="200" weight="200" onmouseover="this.src='img/squ.png';" onmouseout="this.src='img/her.png';">
-            <img id="star" src="img/sta.png" height="200" weight="200">
-        </div>
-        <div>
-            <img id="rect" src="img/rec.png" height="200" weight="200">
-            <img id="square" src="img/sqr.png" height="200" weight="200">
+        <div class="row">
+            <div class="icon">
+                <img id="darkness" src="img/4nh.png" height="200" width="200"
+                onmouseover="this.src='img/4h.png';"
+                onmouseout="this.src='img/4nh.png';"/>
+            </div>
+            <div class="icon">
+                <img id="destruction" src="img/5nh.png" height="200" width="200"
+                onmouseover="this.src='img/5h.png';"
+                onmouseout="this.src='img/5nh.png';"/>
+            </div>
+            <div class="icon">
+                <img id="vastness" src="img/6nh.png" height="200" width="200"
+                onmouseover="this.src='img/6h.png';"
+                onmouseout="this.src='img/6nh.png';"/>
+            </div>
         </div>
 
-
+        <div class="row">
+            <div class="icon">
+                <img id="fade" src="img/7nh.png" height="200" width="200"
+                onmouseover="this.src='img/7h.png';"
+                onmouseout="this.src='img/7nh.png';"/>
+            </div>
+            <div class="icon"> 
+                <img id="blackhole" src="img/8nh.png" height="200" width="200"
+                onmouseover="this.src='img/8h.png';"
+                onmouseout="this.src='img/8nh.png';"/>
+            </div>
+            <div class="icon">
+                <img id="nothingness" src="img/9nh.png" height="200" width="200"
+                onmouseover="this.src='img/9h.png';"
+                onmouseout="this.src='img/9nh.png';"/>
+            </div>
+        </div>
+        <!-- note to self:
+        onmouseover/onmouseout is the hover for html    
+        onmouseup/onmousedown is the clickity click -->
         <script>
-            var sound1 = new buzz.sound("sound/glitch1.mp3");
+            /* var sound1 = new buzz.sound("sound/glitch1.mp3");
             var sound2 = new buzz.sound("sound/glitch2.mp3");
             var sound3 = new buzz.sound("sound/glitch3.mp3");
             var sound4 = new buzz.sound("sound/thonk.mp3");
             var sound5 = new buzz.sound("sound/thonk 2.mp3");
-            /* var sound6 = new buzz.sound("sound/glitch3.mp3");
+            var sound6 = new buzz.sound("sound/glitch3.mp3");
             var sound7 = new buzz.sound("sound/glitch1.mp3");
             var sound8 = new buzz.sound("sound/glitch2.mp3");
-            var sound9 = new buzz.sound("sound/glitch3.mp3"); */
+            var sound9 = new buzz.sound("sound/glitch3.mp3"); 
+
+            document.body.onpointerdown = () => {
+               if (buzz.audioCtx.state != `running`) {
+                    buzz.audioCtx.resume ()
+                }
+            }
      
             window.onload = function() {
                 document.getElementById('don1').addEventListener('mouseover', function () {sound1.play(); });  
@@ -64,11 +106,14 @@
                 document.getElementById('don3').addEventListener('mouseover', function () {sound3.play(); });
                 document.getElementById('hexa').addEventListener('click', function () {sound4.play(); });
                 document.getElementById('star').addEventListener('click', function () {sound5.play(); }); 
-                /* document.getElementById('img6').addEventListener('click', function () {sound6.play(); }); 
+                document.getElementById('img6').addEventListener('click', function () {sound6.play(); }); 
                 document.getElementById('img7').addEventListener('click', function () {sound7.play(); }); 
                 document.getElementById('img8').addEventListener('click', function () {sound8.play(); }); 
-                document.getElementById('img9').addEventListener('click', function () {sound9.play(); }); */
+                document.getElementById('img9').addEventListener('click', function () {sound9.play(); }); 
             } 
+            */
         </script>      
     </body>
 </html>
+
+<!-- "mouseover" is for hover for the javascript, "click" for the click.-->
